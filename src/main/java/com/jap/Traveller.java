@@ -13,11 +13,14 @@ public class Traveller {
         String Result = traveller.toUpperCase(Arrays.toString(Cities));
         System.out.println("UpperCase cities = " + Result);
 
-        Arrays.sort(Cities);
-        System.out.print("Sorted cites = " + Arrays.toString(Cities));
+
+        String[] cities = Traveller.toSortCityArray(Cities);
+
+        int[] sortedDistance = Traveller.toSortDistanceArray(distance);
     }
 
-    public String[] toSortCityArray(String[] Cities) {
+
+    public static String[] toSortCityArray(String[] Cities) {
         Arrays.sort(Cities);
         System.out.println("Sorted cities" + Arrays.toString(Cities));
         return Cities;
@@ -27,9 +30,10 @@ public class Traveller {
         return cities.toUpperCase();
     }
 
-    public int toSortDistanceArray() {
-
-        return 0;
+    public static int[] toSortDistanceArray(int[] distance) {
+        Arrays.sort(distance);
+        System.out.println("sorted array is = " + Arrays.toString(distance));
+        return distance;
     }
 
     public String toFindNearestCity() {
