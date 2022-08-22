@@ -12,17 +12,18 @@ public class Traveller {
         Traveller traveller = new Traveller();
         String Result = traveller.toUpperCase(Arrays.toString(Cities));
         System.out.println("UpperCase cities = " + Result);
-        System.out.println();
 
+        Arrays.sort(Cities);
+        System.out.print("Sorted cites = " + Arrays.toString(Cities));
     }
 
-    public String toSortCityarray() {
-
-        return null;
+    public String[] toSortCityArray(String[] Cities) {
+        Arrays.sort(Cities);
+        System.out.println("Sorted cities" + Arrays.toString(Cities));
+        return Cities;
     }
 
     public String toUpperCase(String cities) {
-
         return cities.toUpperCase();
     }
 
