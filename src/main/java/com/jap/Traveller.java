@@ -21,4 +21,8 @@ public class Traveller {
         return null;
     }
 
+    public int toSortDistanceArray() {
+
+        return 0;
+    }
 }
