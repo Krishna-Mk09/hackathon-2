@@ -16,4 +16,9 @@ public class Traveller {
         return null;
     }
 
+    public String toUpperCase() {
+
+        return null;
+    }
+
 }
