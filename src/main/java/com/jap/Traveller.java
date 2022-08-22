@@ -17,11 +17,21 @@ public class Traveller {
         String[] cities = Traveller.toSortCityArray(Cities);
 
         int[] sortedDistance = Traveller.toSortDistanceArray(distance);
+
+        String city = Traveller.toFindNearestCity(distance, cities);
+        System.out.println("Nearest city 52 km is equal to = " + city);
+
+
+        String CityDistance = Traveller.toFindFarestCity(distance, cities);
+        System.out.println("Nearest City 270 km is equal to = " + CityDistance);
+
+
     }
 
 
     public static String[] toSortCityArray(String[] Cities) {
         Arrays.sort(Cities);
+
         System.out.println("Sorted cities" + Arrays.toString(Cities));
         return Cities;
     }
@@ -36,13 +46,25 @@ public class Traveller {
         return distance;
     }
 
-    public String toFindNearestCity() {
+    public static String toFindNearestCity(int[] distance, String[] cities) {
+        String cityName = " ";
+        for (int i = 0; i < distance.length; i++) {
+            if (distance[i] == 52) {
+                cityName = cities[i];
+            }
+        }
+        return cityName;
 
-        return null;
     }
 
-    public String toFindFarestCity() {
+    public static String toFindFarestCity(int[] distance, String[] cities) {
+        String cityName = " ";
+        for (int i = 0; i < distance.length; i++) {
+            if (distance[i] >= 270) {
+                cityName = cities[i];
+            }
+        }
+        return cityName;
 
-        return null;
     }
 }
