@@ -29,12 +29,10 @@ public class Traveller {
 
 
         // This is a method call.
-        String CityDistance = Traveller.toFindFarestCity(distance, cities);
+        String CityDistance = Traveller.toFindFartestCity(distance, cities);
         System.out.println("Nearest City 270 km is equal to = " + CityDistance);
 
-
     }
-
 
     /**
      * The function takes an array of cities as input, sorts the array, and returns the sorted array
@@ -73,7 +71,7 @@ public class Traveller {
     }
 
     // This method is finding the city name which is the farest from the given distance.
-    public static String toFindFarestCity(int[] distance, String[] cities) {
+    public static String toFindFartestCity(int[] distance, String[] cities) {
         String cityName = " ";
         for (int i = 0; i < distance.length; i++) {
             if (distance[i] >= 270) {
