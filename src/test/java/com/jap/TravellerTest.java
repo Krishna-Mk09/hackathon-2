@@ -89,6 +89,5 @@ public class TravellerTest {
     public void cityWhichIsGreaterThan270kmsFromZurichFailure() {
         Assertions.assertNotEquals("Basel", traveller.toFindFartestCity(distance, cityNames));
         Assertions.assertNotEquals("Lucerne", traveller.toFindFartestCity(distance, cityNames));
-
     }
 }
